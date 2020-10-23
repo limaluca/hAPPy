@@ -42,15 +42,17 @@
         <main class="animation-appear with-sidebar">
             <form action="">
                 <fieldset>
+                    <legend>Dados</legend>
                     <div class="map-container">
-                        <div id="mapid">
+                        <div id="mapid"></div>
 
-                        </div>
+                        <input type="hidden" name="lat">
+                        <input type="hidden" name="lng">
+
                         <footer>
                             <a href="#" id="select-point">Clique no mapa para adicionar a localização</a>
                         </footer>
                     </div>
-                    <legend>Dados</legend>
                     <div class="input-block">
                         <label for="name">Nome</label>
                         <input id="name" name="name" type="text" required>
@@ -79,7 +81,7 @@
 
 
 
-                        <button type="button">
+                        <button type="button" onclick="addPhotoField()">
                         <img src="/public/images/add.svg" alt="Nova Imagem">
                         </button>
 

@@ -13,12 +13,29 @@ const icon = L.icon({
     iconAnchor: [29, 68]
 })
 
+
+// L.marker([-2.522602, -44.254434], { icon: icon }).addTo(map)
+
 let marker;
 
 // create and add map
 map.on('click', (event) => {
     const lat = event.latlng.lat;
     const lng = event.latlng.lng;
-    console.log("latitude: " + lat)
-    console.log("longitude: " + lng)
+
+    document.querySelector('[name=lat').value = lat;
+    document.querySelector('[name=lng').value = lng;
+
+
+    //Remove icon from the layer
+    marker && map.removeLayer(marker)
+
+    // Add icon to the layer
+    marker = L.marker([lat, lng], { icon }).addTo(map)
+
 })
+
+// Adding the photo field
+function addPhotoField() {
+    console.log("It is working, bitch")
+}
