@@ -37,5 +37,72 @@ map.on('click', (event) => {
 
 // Adding the photo field
 function addPhotoField() {
-    console.log("It is working, bitch")
+    // console.log("It is working, bitch")
+
+    // get the photos container #images
+    const container = document.querySelector('#images');
+
+    // get the container that will be duplicated .new-upload -> (array)
+    const fieldsContainer = document.querySelectorAll('.new-upload');
+
+    // do the double of the last image added
+    const newFieldContainer = fieldsContainer[fieldsContainer.length - 1].cloneNode(true)
+
+    // Verification if the field is empty. If so, do not add to the images container
+    const input = newFieldContainer.children[0];
+    if (input.value == "") { // if its empty the return ends the function
+        return
+    }
+
+    // clear the cloned field before adding it to the container
+    newFieldContainer.children[0].value = "";
+    console.log(newFieldContainer.children)
+
+    // add the clone the images container
+    container.appendChild(newFieldContainer)
+}
+
+function deleteField(event) {
+
+    const span = event.currentTarget
+
+    const fieldsContainer = document.querySelectorAll('.new-upload');
+
+
+    if (fieldsContainer.length < 2) {
+        //Clear the field before returning
+        span.parentNode.children[0].value = ""
+        return
+    }
+
+    span.parentNode.remove();
+
+
+    console.log("cheguei aqui")
+
+
+
+}
+
+// select yes or no 
+
+function toggleSelect(event) {
+    // delete the active class from the buttons
+    document.querySelectorAll('.button-select button')
+    document.querySelectorAll('.button-select button')
+        .forEach((button) => button.classList.remove('active')) //arrow function
+
+
+    // put the active class on the clicked class
+    const button = event.currentTarget
+    button.classList.add('active')
+
+
+    // update the hidden input with the selected value
+    const input = document.querySelector('[name ="open_on_weekends"')
+
+    //verify if its value is yes or no
+    input.value = button.dataset.value
+
+
 }
