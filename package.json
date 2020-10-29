@@ -1,23 +1,25 @@
 {
-  "name": "nextl-level-week",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/limaluca/hAPPy.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/limaluca/hAPPy/issues"
-  },
-  "homepage": "https://github.com/limaluca/hAPPy#readme",
-  "dependencies": {
-    "express": "^4.17.1"
-  }
+    "name": "nextl-level-week",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "nodemon src/server.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/limaluca/hAPPy.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/limaluca/hAPPy/issues"
+    },
+    "homepage": "https://github.com/limaluca/hAPPy#readme",
+    "dependencies": {
+        "express": "^4.17.1",
+        "hbs": "^4.1.1",
+        "nodemon": "^2.0.6"
+    }
 }
