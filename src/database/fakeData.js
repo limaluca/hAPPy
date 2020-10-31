@@ -31,7 +31,7 @@ module.exports = [
             "https://images.unsplash.com/photo-1586978450997-3251b1d493e9?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9"
         ],
         instructions: "Venha como se sentir a vontade e traga muito amor e paciência para dar.",
-        opening_hours: "Horário de visitas Das 18h até 8h",
+        opening_hours: "Horário de visitas Das 18h até 22h",
         open_on_weekends: "0"
     },
 ]

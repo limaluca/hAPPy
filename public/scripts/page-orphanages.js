@@ -30,7 +30,18 @@ function addMarker({ id, name, lat, lng }) {
     L.marker([lat, lng], { icon: icon }).addTo(map).bindPopup(popup)
 }
 
+
+//Dataset = objeto do HTML, aqui ele seleciona o span hidden e pega os dados la inseridos
 const orphanagesSpan = document.querySelectorAll('.orphanages span')
 orphanagesSpan.forEach(span => {
-    const orphanage = {}
+    const orphanage = {
+        id: span.dataset.id,
+        name: span.dataset.name,
+        lat: span.dataset.lat,
+        lng: span.dataset.lng
+
+    }
+
+    addMarker(orphanage)
+
 })
