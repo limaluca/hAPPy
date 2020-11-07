@@ -106,3 +106,10 @@ function toggleSelect(event) {
 
 
 }
+
+function validate(event) {
+    //Work on a way to check if the map pin is filled too 
+
+    //this function prevents the form to be sent to the backend
+    event.preventDefault()
+}

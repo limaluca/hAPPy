@@ -44,6 +44,15 @@ module.exports = {
 
     createOrphanage(request, response) {
         return response.render('create-orphanage')
+    },
+
+    saveOrphanage(request, response) {
+        const fields = request.body;
+
+        //validate all of the fields are filled
+        if (Object.values(fields).includes('')) {
+            response.send("Todos os campos devem ser preenchidos!")
+        }
     }
 
 }
