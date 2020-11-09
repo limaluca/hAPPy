@@ -107,9 +107,10 @@ function toggleSelect(event) {
 
 }
 
-function validate(event) {
-    //Work on a way to check if the map pin is filled too 
+// function validate(event) {
+//     //Work on a way to check if the field of the map pin is filled
 
-    //this function prevents the form to be sent to the backend
-    event.preventDefault()
-}
+//     //this function prevents the form to be sent to the backend
+//     event.preventDefault()
+//     alert("Preencha o campo vazio")
+// }
